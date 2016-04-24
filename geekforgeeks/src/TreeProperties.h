@@ -40,6 +40,7 @@ int childrenSumProperty(node *root);
 void inorderTraversalTest(node *root);
 void convertTree(node *root);
 int heightBalanced(node *root);
+void printPathLeafPathSum(node *root, int array[], int len, int sum);
 
 
 #endif /* TREEPROPERTIES_H_ */

@@ -104,5 +104,10 @@ int main() {
 
 	cout << endl << "is tree root height balanced ?" <<endl;
 	cout << heightBalanced(root3);
+
+	cout << endl << "for tree root, print the path to leaf with sum 7"<<endl;
+	int array[100];
+	printPathLeafPathSum(root, array, 0, 7);
+
 	 return 0;
 }
