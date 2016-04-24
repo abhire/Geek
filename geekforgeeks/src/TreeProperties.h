@@ -39,7 +39,7 @@ void printSpiralStack(node *root);
 int childrenSumProperty(node *root);
 void inorderTraversalTest(node *root);
 void convertTree(node *root);
-
+int heightBalanced(node *root);
 
 
 #endif /* TREEPROPERTIES_H_ */
