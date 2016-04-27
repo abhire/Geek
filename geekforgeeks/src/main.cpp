@@ -34,6 +34,37 @@ int main() {
 	root3->left = createnode(8);
 	root3->left->left = createnode(3);
 	root3->left->right = createnode(5);
+
+
+
+	struct node *root4 = createnode(1);
+	  root4->left        = createnode(2);
+	  root4->right       = createnode(3);
+	  root4->left->left  = createnode(4);
+	  root4->left->right = createnode(5);
+
+
+		struct node *root5 = createnode(1);
+		root5->left        = createnode(2);
+		root5->right       = createnode(3);
+		root5->left->left  = createnode(4);
+		root5->left->right = createnode(5);
+		root5->right->left  = createnode(6);
+		root5->right->right  = createnode(7);
+
+		root5->left->right->left  = createnode(8);
+		root5->left->right->right  = createnode(9);
+
+		root5->right->left->right  = createnode(10);
+
+		struct node *root6 = createnode(1);
+		root6->left        = createnode(2);
+		root6->right       = createnode(3);
+		root6->left->right  = createnode(4);
+		root6->left->right->right = createnode(5);
+		root6->left->right->right->right = createnode(6);
+
+
 //	root3->right = createnode(2);
 //	root3->right->left = createnode(2);
 
@@ -102,12 +133,44 @@ int main() {
 //	 convertTree(root);
 //	 inorderTraversalTest(root);
 
-	cout << endl << "is tree root height balanced ?" <<endl;
-	cout << heightBalanced(root3);
+//	cout << endl << "is tree root height balanced ?" <<endl;
+//	cout << heightBalanced(root3);
+//
+//	cout << endl << "for tree root, print the path to leaf with sum 7"<<endl;
+//	int array[100];
+//	printPathLeafPathSum(root, array, 0, 7);
+//
+//
+//	cout << endl << "root4 tree before doubletree" <<endl;
+//	inorderTraversalTest(root4);
+//	doubleTree(root4);
+//
+//	cout << endl << "root4 tree after doubletree" <<endl;
+//	inorderTraversalTest(root4);
 
-	cout << endl << "for tree root, print the path to leaf with sum 7"<<endl;
-	int array[100];
-	printPathLeafPathSum(root, array, 0, 7);
+	  cout << endl << "max width of the tree root5 is :" << endl;
+	  cout << maxWidth(root5);
+
+	  cout << endl << "print the distance 4 nodes in tree root5" << endl;
+	printKdistanceNodes (root5, 4);
+
+	cout << endl << "level of node with data 9 in tree root5 is " << endl;
+	cout <<	getLevelofNode(root5 , 9);
+
+//	cout << endl << "print level with nULL " << endl;
+//	printLevelsQueueNULL(root);
+
+	cout << endl << "top view of tree root6 " << endl;
+	torchUpTree(root5);
+
+	cout << endl << "Ancestors of 10 in tree root5" << endl;
+	int array[20];
+	int len = 0;
+	PrintAncestors (root5, array, len, 5);
+
+	cout << endl << "level 10 in tree root5" << endl;
+	int level = 0;
+	levelNode(root5,level, 1);
 
 	 return 0;
 }

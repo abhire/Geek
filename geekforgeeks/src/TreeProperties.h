@@ -41,6 +41,13 @@ void inorderTraversalTest(node *root);
 void convertTree(node *root);
 int heightBalanced(node *root);
 void printPathLeafPathSum(node *root, int array[], int len, int sum);
-
+void doubleTree (node *root);
+int maxWidth(node *root);
+void printKdistanceNodes (node *root, int dist);
+int getLevelofNode(node *root , int data);
+void printLevelsQueueNULL(node *root);
+void torchUpTree(node *root);
+void PrintAncestors (node *root, int array[], int len, int data);
+void levelNode(node *root, int level, int data);
 
 #endif /* TREEPROPERTIES_H_ */

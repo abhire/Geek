@@ -68,3 +68,41 @@ void printLevelsQueue(node *root)
 	}
 
 }
+
+//this is BFS traversal as well //it is not working
+void printLevelsQueueNULL(node *root)
+{
+	if (NULL == root)
+		return;
+
+	std::queue<node *> q;
+
+	q.push(root);
+	q.push(NULL);
+
+
+
+	while (!q.empty())
+	{
+		node *ptr ;
+		ptr = q.front();
+		q.pop();
+
+		if (ptr == NULL) {
+			q.push(NULL);
+			cout << endl;
+		} else {
+
+			cout << ptr->data;
+
+			if (ptr->left)
+				q.push(ptr->left);
+
+			if (ptr->right)
+				q.push(ptr->right);
+
+		}
+
+	}
+
+}
