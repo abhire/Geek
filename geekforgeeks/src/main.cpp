@@ -8,6 +8,7 @@
 
 #include <iostream>
 #include "TreeProperties.h"
+#include <queue>
 using namespace std;
 
 
@@ -119,58 +120,67 @@ int main() {
 //	 }
 //
 //	 cout << endl << "print the tree root in spiral form using stacks" << endl;
-//	 printSpiralStack(root);
+////	 printSpiralStack(root);
+////
+////	 cout << endl << "tree root follow children sum property ?" << endl;
+////	 cout << childrenSumProperty(root);
+////
+////	 cout << endl << "tree root3 follow children sum property ?" << endl;
+////	 cout << childrenSumProperty(root3);
+////
+////	 cout << endl << "tree root test : in order without recursion and stack" << endl;
+////	 inorderTraversalTest(root);
+////	 cout << endl << "convert tree to follow child sum porperty" <<endl;
+////	 convertTree(root);
+////	 inorderTraversalTest(root);
 //
-//	 cout << endl << "tree root follow children sum property ?" << endl;
-//	 cout << childrenSumProperty(root);
+////	cout << endl << "is tree root height balanced ?" <<endl;
+////	cout << heightBalanced(root3);
+////
+////	cout << endl << "for tree root, print the path to leaf with sum 7"<<endl;
+////	int array[100];
+////	printPathLeafPathSum(root, array, 0, 7);
+////
+////
+////	cout << endl << "root4 tree before doubletree" <<endl;
+////	inorderTraversalTest(root4);
+////	doubleTree(root4);
+////
+////	cout << endl << "root4 tree after doubletree" <<endl;
+////	inorderTraversalTest(root4);
 //
-//	 cout << endl << "tree root3 follow children sum property ?" << endl;
-//	 cout << childrenSumProperty(root3);
+//	  cout << endl << "max width of the tree root5 is :" << endl;
+//	  cout << maxWidth(root5);
 //
-//	 cout << endl << "tree root test : in order without recursion and stack" << endl;
-//	 inorderTraversalTest(root);
-//	 cout << endl << "convert tree to follow child sum porperty" <<endl;
-//	 convertTree(root);
-//	 inorderTraversalTest(root);
-
-//	cout << endl << "is tree root height balanced ?" <<endl;
-//	cout << heightBalanced(root3);
+//	  cout << endl << "print the distance 4 nodes in tree root5" << endl;
+//	printKdistanceNodes (root5, 4);
 //
-//	cout << endl << "for tree root, print the path to leaf with sum 7"<<endl;
-//	int array[100];
-//	printPathLeafPathSum(root, array, 0, 7);
+//	cout << endl << "level of node with data 9 in tree root5 is " << endl;
+//	cout <<	getLevelofNode(root5 , 9);
 //
+////	cout << endl << "print level with nULL " << endl;
+////	printLevelsQueueNULL(root);
 //
-//	cout << endl << "root4 tree before doubletree" <<endl;
-//	inorderTraversalTest(root4);
-//	doubleTree(root4);
+//	cout << endl << "top view of tree root6 " << endl;
+//	torchUpTree(root5);
 //
-//	cout << endl << "root4 tree after doubletree" <<endl;
-//	inorderTraversalTest(root4);
+//	cout << endl << "Ancestors of 10 in tree root5" << endl;
+//	int array[20];
+//	int len = 0;
+//	PrintAncestors (root5, array, len, 5);
 
-	  cout << endl << "max width of the tree root5 is :" << endl;
-	  cout << maxWidth(root5);
+//	cout << endl << "level 10 in tree root5" << endl;
+//	cout << 8;
+//	int level = 0;
+//	levelNode(root5,level, 1);
 
-	  cout << endl << "print the distance 4 nodes in tree root5" << endl;
-	printKdistanceNodes (root5, 4);
+		std::queue <int> q;
 
-	cout << endl << "level of node with data 9 in tree root5 is " << endl;
-	cout <<	getLevelofNode(root5 , 9);
+		if ( 0 == q.front())
+			cout << "thats it";
+		else
+			cout << q.front();
 
-//	cout << endl << "print level with nULL " << endl;
-//	printLevelsQueueNULL(root);
-
-	cout << endl << "top view of tree root6 " << endl;
-	torchUpTree(root5);
-
-	cout << endl << "Ancestors of 10 in tree root5" << endl;
-	int array[20];
-	int len = 0;
-	PrintAncestors (root5, array, len, 5);
-
-	cout << endl << "level 10 in tree root5" << endl;
-	int level = 0;
-	levelNode(root5,level, 1);
 
 	 return 0;
 }
